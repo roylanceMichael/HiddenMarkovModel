@@ -1,0 +1,27 @@
+﻿<Properties VersionControlDisabled="True">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="HiddenMarkovModelTests\TransitionRecordTests.cs">
+    <Files>
+      <File FileName="HiddenMarkovModelTests\EmissionRecordTests.cs" Line="12" Column="48" />
+      <File FileName="HiddenMarkovModel\EmissionRecord.cs" Line="17" Column="3" />
+      <File FileName="HiddenMarkovModel\Utilities\ObjectExtensions.cs" Line="9" Column="23" />
+      <File FileName="HiddenMarkovModel\TransitionRecord.cs" Line="15" Column="3" />
+      <File FileName="HiddenMarkovModelTests\TransitionRecordTests.cs" Line="15" Column="4" />
+    </Files>
+    <Pads>
+      <Pad Id="MonoDevelop.NUnit.TestPad">
+        <State expanded="True" selected="True">
+          <Node name="HiddenMarkovModelTests" expanded="True">
+            <Node name="HiddenMarkovModelTests" expanded="True">
+              <Node name="EmissionRecordTests" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
