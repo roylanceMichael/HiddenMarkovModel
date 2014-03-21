@@ -33,9 +33,6 @@ namespace HiddenMarkovModel
 			var bigramTransitions = new BigramBuilder (input).Build ();
 
 
-
-
-
 			return null;
 		}
 
