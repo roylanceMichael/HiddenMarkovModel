@@ -39,7 +39,7 @@ namespace HiddenMarkovModel
 			return null;
 		}
 
-		private IDictionary<string, DictionaryLookup<T>> BuildDictionary<T>(IEnumerable<DictionaryLookup<T>> dictionaryLookups)
+		private IDictionary<string, DictionaryLookup<T>> BuildDictionary<T>(IEnumerable<DictionaryLookup<T>> dictionaryLookups) where T : KeyRecord
 		{
 			var newDictionary = new Dictionary<string, DictionaryLookup<T>> ();
 
