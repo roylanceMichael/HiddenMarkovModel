@@ -5,20 +5,20 @@ using System;
 namespace HiddenMarkovModelTests
 {
 	[TestFixture ()]
-	public class TransitionRecordTests
+	public class EmissionRecordTests
 	{
 		[Test ()]
 		[ExpectedException(typeof(ArgumentNullException))]
-		public void ExceptionThrownWhenNullFromTransition ()
+		public void ExceptionThrownWhenNullTransition ()
 		{
-			new TransitionRecord (null, "something");
+			new EmissionRecord (null, "something", 0);
 		}
 
 		[Test ()]
 		[ExpectedException(typeof(ArgumentNullException))]
-		public void ExceptionThrownWhenNullToTransition ()
+		public void ExceptionThrownWhenNullEmission ()
 		{
-			new TransitionRecord ("something", null);
+			new EmissionRecord ("something", null, 0);
 		}
 	}
 }
