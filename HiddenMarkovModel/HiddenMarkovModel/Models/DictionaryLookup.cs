@@ -30,6 +30,13 @@ namespace HiddenMarkovModel
 			}
 		}
 
+		public IEnumerable<T> Destinations
+		{
+			get {
+				return this.frequency;
+			}
+		}
+
 		public IEnumerable<string> DestinationKeys 
 		{
 			get 
@@ -42,6 +49,15 @@ namespace HiddenMarkovModel
 		{
 			destinationKey.CheckWhetherArgumentIsNull ("destinationKey");
 			return this.frequency.Any (keyRecord => keyRecord.Key == destinationKey);
+		}
+
+		public T GetDestination(string destinationKey)
+		{
+			if (this.HasDestination (destinationKey)) {
+				return this.frequency.First(destination => destination.Key == destinationKey);
+			}
+
+			return null;
 		}
 
 		public double GetFrequency(string destinationKey)

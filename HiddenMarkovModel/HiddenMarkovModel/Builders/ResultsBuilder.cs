@@ -27,29 +27,29 @@ namespace HiddenMarkovModel
 
 		public IEnumerable<ResultRecord> Build ()
 		{
-
 			// start at the beginning
 			var resultRecords = new List<ResultRecord> ();
 
+			// build all resultRecords together
 			foreach (var bigram in this.bigramInput) {
 				// does our fromTransition exist?
 				if (this.transitions.ContainsKey (bigram.From) && 
 					this.transitions[bigram.From].HasDestination(bigram.To) && 
 					this.emissions.ContainsKey(bigram.To)) {
 
-					var frequency = this.transitions [bigram.From].GetFrequency (bigram.To);
+					var transition = this.transitions [bigram.From].GetDestination (bigram.To);
 
-					foreach (var emissionKey in this.emissions[bigram.To].DestinationKeys) {
-						
+					foreach (var emission in this.emissions[bigram.To].Destinations) {
+						var newResultRecord = new ResultRecord (transition, emission);
 					}
-
-					// var newResultRecord = new ResultRecord(bigramTransition.FromTransition, bigramTransition.ToTransition, 
-				
 				}
-				
 			}
 
-
+			// build structure linking all possibilities together
+			foreach (var resultRecord in resultRecords) {
+				
+			}
+				
 			throw new NotImplementedException ();
 		}
 	}
