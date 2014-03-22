@@ -2,9 +2,9 @@
 
 namespace HiddenMarkovModel
 {
-	public class EmissionRecord : KeyRecord
+	internal class EmissionRecord : KeyRecord
 	{
-		public EmissionRecord (string transition, string emission, double logProbability)
+		internal EmissionRecord (string transition, string emission, double logProbability)
 			: base(transition, emission, logProbability)
 		{
 		}

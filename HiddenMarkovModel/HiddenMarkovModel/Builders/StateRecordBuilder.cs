@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace HiddenMarkovModel
 {
-	public class ResultsBuilder : IBuilder<IEnumerable<StateRecord>>
+	internal class StateRecordBuilder : IBuilder<IEnumerable<StateRecord>>
 	{
 		private readonly IEnumerable<Bigram> bigramInput;
 
@@ -14,7 +14,7 @@ namespace HiddenMarkovModel
 
 		private readonly List<StateRecord> stateRecordWorkspace;
 
-		public ResultsBuilder (
+		internal StateRecordBuilder (
 			IEnumerable<Bigram> bigramInput, 
 			IDictionary<string, DictionaryLookup<TransitionRecord>> transitions,
 			IDictionary<string, DictionaryLookup<EmissionRecord>> emissions)

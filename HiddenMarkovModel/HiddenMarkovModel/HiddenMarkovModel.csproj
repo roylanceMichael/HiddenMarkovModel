@@ -42,14 +42,20 @@
     <Compile Include="HiddenMarkovModel.cs" />
     <Compile Include="Models\EmissionRecord.cs" />
     <Compile Include="Models\TransitionRecord.cs" />
-    <Compile Include="Models\QueryResults.cs" />
     <Compile Include="Models\DictionaryLookup.cs" />
     <Compile Include="Models\KeyRecord.cs" />
     <Compile Include="Models\Bigram.cs" />
     <Compile Include="Builders\BigramBuilder.cs" />
-    <Compile Include="Builders\ResultsBuilder.cs" />
     <Compile Include="Builders\IBuilder.cs" />
     <Compile Include="Models\StateRecord.cs" />
+    <Compile Include="Builders\StateRecordBuilder.cs" />
+    <Compile Include="Models\InputResults.cs" />
+    <Compile Include="Builders\InputResultsBuilder.cs" />
+    <Compile Include="Models\HiddenMarkovData.cs" />
+    <Compile Include="Builders\HiddenMarkovDataBuilder.cs" />
+    <Compile Include="HiddenMarkovModelBuilder.cs" />
+    <Compile Include="TransitionEmission.cs" />
+    <Compile Include="TransitionEmissions.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>

@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace HiddenMarkovModel
 {
-	public class DictionaryLookup<T> where T: KeyRecord
+	internal class DictionaryLookup<T> where T: KeyRecord
 	{
 		private readonly string key;
 

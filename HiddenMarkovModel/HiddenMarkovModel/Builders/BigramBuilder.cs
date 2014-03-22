@@ -3,11 +3,11 @@ using System.Collections.Generic;
 
 namespace HiddenMarkovModel
 {
-	public class BigramBuilder : IBuilder<IEnumerable<Bigram>>
+	internal class BigramBuilder : IBuilder<IEnumerable<Bigram>>
 	{
 		private readonly string[] input;
 
-		public BigramBuilder (string[] input)
+		internal BigramBuilder (string[] input)
 		{
 			input.CheckWhetherArgumentIsNull ("input");
 			this.input = input;

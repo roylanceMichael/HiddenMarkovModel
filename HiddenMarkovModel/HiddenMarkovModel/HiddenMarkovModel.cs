@@ -6,46 +6,33 @@ namespace HiddenMarkovModel
 {
 	public class HiddenMarkovModel
 	{
-		private readonly IDictionary<string, DictionaryLookup<TransitionRecord>> transitions;
+		private readonly HiddenMarkovData hiddenMarkovData;
 
-		private readonly IDictionary<string, DictionaryLookup<EmissionRecord>> emissions;
-
-		public HiddenMarkovModel (IEnumerable<DictionaryLookup<TransitionRecord>> transitions, IEnumerable<DictionaryLookup<EmissionRecord>> emissions)
+		internal HiddenMarkovModel (HiddenMarkovData hiddenMarkovData)
 		{
-			transitions.CheckWhetherArgumentIsNull ("transitions");
-			emissions.CheckWhetherArgumentIsNull ("emissions");
+			hiddenMarkovData.CheckWhetherArgumentIsNull ("hiddenMarkovData");
 
-			this.transitions = this.BuildDictionary(transitions);
-			this.emissions = this.BuildDictionary (emissions);
+			this.hiddenMarkovData = hiddenMarkovData;
 		}
 
 		// this will contain transitions and emissions
-		public IEnumerable<QueryResults> GetEmissions(string[] input)
+		public IEnumerable<InputResults> GetEmissions(string[] input)
 		{
 			input.CheckWhetherArgumentIsNull ("input");
 
 			if (input.Length < 1) 
 			{
-				return new QueryResults[0];
+				return new InputResults[0];
 			}
 
 			// we need to separate out the input into bigrams
 			var bigramTransitions = new BigramBuilder (input).Build ();
-			var stateResults = new ResultsBuilder (bigramTransitions, this.transitions, this.emissions).Build ();
 
+			// generate the leaf results
+			var stateResults = new StateRecordBuilder (bigramTransitions, this.hiddenMarkovData.Transitions, this.hiddenMarkovData.Emissions).Build ();
 
-			return null;
-		}
-
-		private IDictionary<string, DictionaryLookup<T>> BuildDictionary<T>(IEnumerable<DictionaryLookup<T>> dictionaryLookups) where T : KeyRecord
-		{
-			var newDictionary = new Dictionary<string, DictionaryLookup<T>> ();
-
-			foreach (var dictionaryLookup in dictionaryLookups) {
-				newDictionary [dictionaryLookup.Key] = dictionaryLookup;
-			}
-
-			return newDictionary;
+			// build the output
+			return new InputResultsBuilder (stateResults).Build ();
 		}
 	}
 }

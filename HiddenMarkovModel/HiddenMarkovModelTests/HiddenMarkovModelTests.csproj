@@ -42,16 +42,12 @@
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <Compile Include="Models\EmissionRecordTests.cs" />
-    <Compile Include="Models\TransitionRecordTests.cs" />
+    <Compile Include="TransitionEmissionsTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\HiddenMarkovModel\HiddenMarkovModel.csproj">
       <Project>{0A53428C-EDDD-480B-B016-31D715137396}</Project>
       <Name>HiddenMarkovModel</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\" />
   </ItemGroup>
 </Project>

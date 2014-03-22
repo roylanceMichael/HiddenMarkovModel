@@ -2,9 +2,9 @@
 
 namespace HiddenMarkovModel
 {
-	public static class ObjectExtensions
+	internal static class ObjectExtensions
 	{
-		public static void CheckWhetherArgumentIsNull(this object value, string name)
+		internal static void CheckWhetherArgumentIsNull(this object value, string name)
 		{
 			if (value == null) 
 			{

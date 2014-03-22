@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace HiddenMarkovModel
 {
-	public class StateRecord
+	internal class StateRecord
 	{
 		private readonly TransitionRecord transition;
 
@@ -16,7 +16,7 @@ namespace HiddenMarkovModel
 
 		private readonly HashSet<StateRecord> nextStates;
 
-		public StateRecord (TransitionRecord transition, EmissionRecord emission, StateRecord previousState)
+		internal StateRecord (TransitionRecord transition, EmissionRecord emission, StateRecord previousState)
 		{
 			transition.CheckWhetherArgumentIsNull ("transition");
 			emission.CheckWhetherArgumentIsNull ("emission");

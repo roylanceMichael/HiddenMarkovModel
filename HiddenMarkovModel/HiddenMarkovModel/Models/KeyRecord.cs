@@ -2,7 +2,7 @@
 
 namespace HiddenMarkovModel
 {
-	public abstract class KeyRecord
+	internal abstract class KeyRecord
 	{
 		private readonly string key;
 

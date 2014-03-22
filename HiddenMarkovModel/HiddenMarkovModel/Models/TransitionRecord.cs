@@ -2,9 +2,9 @@
 
 namespace HiddenMarkovModel
 {
-	public class TransitionRecord : KeyRecord
+	internal class TransitionRecord : KeyRecord
 	{
-		public TransitionRecord (string fromTransition, string toTransition, double logProbability)
+		internal TransitionRecord (string fromTransition, string toTransition, double logProbability)
 			: base(fromTransition, toTransition, logProbability)
 		{
 		}

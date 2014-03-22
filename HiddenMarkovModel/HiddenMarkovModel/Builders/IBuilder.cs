@@ -2,7 +2,7 @@
 
 namespace HiddenMarkovModel
 {
-	public interface IBuilder<out T>
+	internal interface IBuilder<out T>
 	{
 		T Build();
 	}
