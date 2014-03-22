@@ -43,13 +43,13 @@
     <Compile Include="Models\EmissionRecord.cs" />
     <Compile Include="Models\TransitionRecord.cs" />
     <Compile Include="Models\QueryResults.cs" />
-    <Compile Include="Models\ResultRecord.cs" />
     <Compile Include="Models\DictionaryLookup.cs" />
     <Compile Include="Models\KeyRecord.cs" />
     <Compile Include="Models\Bigram.cs" />
     <Compile Include="Builders\BigramBuilder.cs" />
     <Compile Include="Builders\ResultsBuilder.cs" />
     <Compile Include="Builders\IBuilder.cs" />
+    <Compile Include="Models\StateRecord.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>

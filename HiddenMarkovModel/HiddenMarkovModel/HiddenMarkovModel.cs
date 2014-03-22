@@ -31,6 +31,7 @@ namespace HiddenMarkovModel
 
 			// we need to separate out the input into bigrams
 			var bigramTransitions = new BigramBuilder (input).Build ();
+			var stateResults = new ResultsBuilder (bigramTransitions, this.transitions, this.emissions).Build ();
 
 
 			return null;
