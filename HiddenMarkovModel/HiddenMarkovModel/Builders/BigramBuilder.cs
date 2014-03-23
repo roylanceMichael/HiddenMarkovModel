@@ -18,9 +18,11 @@ namespace HiddenMarkovModel
 			var bigramTransitions = new List<Bigram> ();
 
 			// is the length bigger than 1?
-			if (this.input.Length < 2) {
+			if (this.input.Length < 1) {
 				return bigramTransitions;
 			}
+
+			bigramTransitions.Add (this.BuildFirstTransition (this.input [0]));
 
 			for (var i = 1; i < this.input.Length; i++) {
 				var fromTransition = this.input [i - 1];
@@ -30,6 +32,11 @@ namespace HiddenMarkovModel
 			}
 				
 			return bigramTransitions;
+		}
+
+		private Bigram BuildFirstTransition(string firstTransition) 
+		{
+			return new Bigram (string.Empty, firstTransition);
 		}
 	}
 }

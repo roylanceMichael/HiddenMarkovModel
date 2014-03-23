@@ -43,6 +43,7 @@
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <Compile Include="TransitionEmissionsTests.cs" />
+    <Compile Include="HiddenMarkovModelTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\HiddenMarkovModel\HiddenMarkovModel.csproj">

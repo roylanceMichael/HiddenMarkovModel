@@ -48,13 +48,13 @@ namespace HiddenMarkovModel
 		public bool HasDestination(string destinationKey) 
 		{
 			destinationKey.CheckWhetherArgumentIsNull ("destinationKey");
-			return this.frequency.Any (keyRecord => keyRecord.Key == destinationKey);
+			return this.frequency.Any (keyRecord => keyRecord.Value == destinationKey);
 		}
 
 		public T GetDestination(string destinationKey)
 		{
 			if (this.HasDestination (destinationKey)) {
-				return this.frequency.First(destination => destination.Key == destinationKey);
+				return this.frequency.First(destination => destination.Value == destinationKey);
 			}
 
 			return null;

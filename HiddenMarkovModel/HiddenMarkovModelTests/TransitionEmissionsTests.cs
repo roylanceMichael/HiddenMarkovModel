@@ -7,13 +7,39 @@ namespace HiddenMarkovModelTests
 	[TestFixture ()]
 	public class TransitionEmissionsTests
 	{
+		private const string Transition = "test1";
+		private const string Emission = "test2";
+
+		[Test ()]
+		[ExpectedException(typeof(ArgumentNullException))]
+		public void ExceptionThrownWhenTransitionIsNull ()
+		{
+			// arrange
+			var transitionEmission = new TransitionEmissions ();
+
+			// act
+			transitionEmission.AddTransitionEmission (null, Emission);
+
+			// assert - exception
+		}
+
+		[Test ()]
+		[ExpectedException(typeof(ArgumentNullException))]
+		public void ExceptionThrownWhenEmissionIsNull ()
+		{
+			// arrange
+			var transitionEmission = new TransitionEmissions ();
+
+			// act
+			transitionEmission.AddTransitionEmission (Transition, null);
+
+			// assert - exception
+		}
+
 		[Test ()]
 		public void RecordsAddedWhenAccessedThroughMethod ()
 		{
 			// arrange
-			const string Transition = "test1";
-			const string Emission = "test2";
-
 			var transitionEmission = new TransitionEmissions ();
 
 			// act
