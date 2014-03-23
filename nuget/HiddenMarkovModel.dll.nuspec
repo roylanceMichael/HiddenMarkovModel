@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>HiddenMarkovModel</id>
+    <version>1.0.7</version>
+    <authors>mike.roylance</authors>
+    <owners>mike.roylance</owners>
+    <licenseUrl>https://github.com/roylanceMichael/ObjectToSqlMapper/blob/master/license.txt</licenseUrl>
+    <projectUrl>https://github.com/roylanceMichael/ObjectToSqlMapper</projectUrl>
+    <iconUrl>https://raw.github.com/roylanceMichael/ObjectToSqlMapper/master/SQL.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A simple library for mapping objects to sql statements.</description>
+    <releaseNotes>LEFT JOIN is the default join type</releaseNotes>
+    <copyright>Copyright 2014 Mike Roylance</copyright>
+    <tags></tags>
+  </metadata>
+</package>
