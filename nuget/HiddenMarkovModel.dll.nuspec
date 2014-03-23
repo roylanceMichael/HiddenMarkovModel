@@ -2,15 +2,15 @@
 <package >
   <metadata>
     <id>HiddenMarkovModel</id>
-    <version>1.0.7</version>
+    <version>0.1</version>
     <authors>mike.roylance</authors>
     <owners>mike.roylance</owners>
-    <licenseUrl>https://github.com/roylanceMichael/ObjectToSqlMapper/blob/master/license.txt</licenseUrl>
-    <projectUrl>https://github.com/roylanceMichael/ObjectToSqlMapper</projectUrl>
-    <iconUrl>https://raw.github.com/roylanceMichael/ObjectToSqlMapper/master/SQL.png</iconUrl>
+    <licenseUrl>https://github.com/roylanceMichael/HiddenMarkovModel/blob/master/license.txt</licenseUrl>
+    <projectUrl>https://github.com/roylanceMichael/HiddenMarkovModel</projectUrl>
+    <iconUrl>https://raw.github.com/roylanceMichael/HiddenMarkovModel/master/hmm.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>A simple library for mapping objects to sql statements.</description>
-    <releaseNotes>LEFT JOIN is the default join type</releaseNotes>
+    <description>A simple library that utilizes hidden markov modeling for predictive purposes.</description>
+    <releaseNotes>initial release</releaseNotes>
     <copyright>Copyright 2014 Mike Roylance</copyright>
     <tags></tags>
   </metadata>
