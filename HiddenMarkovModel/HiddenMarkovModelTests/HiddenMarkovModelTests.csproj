@@ -44,11 +44,19 @@
   <ItemGroup>
     <Compile Include="TransitionEmissionsTests.cs" />
     <Compile Include="HiddenMarkovModelTests.cs" />
+    <Compile Include="utils\EmbeddedResourceUtilities.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\HiddenMarkovModel\HiddenMarkovModel.csproj">
       <Project>{0A53428C-EDDD-480B-B016-31D715137396}</Project>
       <Name>HiddenMarkovModel</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="docs\" />
+    <Folder Include="utils\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="docs\brown-ca01.txt" />
   </ItemGroup>
 </Project>

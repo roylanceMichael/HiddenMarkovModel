@@ -2,20 +2,14 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="HiddenMarkovModelTests/HiddenMarkovModelTests.cs">
     <Files>
-      <File FileName="HiddenMarkovModelTests/TransitionEmissionsTests.cs" Line="44" Column="4" />
-      <File FileName="HiddenMarkovModelTests/HiddenMarkovModelTests.cs" Line="13" Column="4" />
-      <File FileName="HiddenMarkovModel/HiddenMarkovModelBuilder.cs" Line="9" Column="1" />
-      <File FileName="HiddenMarkovModel/TransitionEmissions.cs" Line="21" Column="36" />
+      <File FileName="HiddenMarkovModel/Models/StateRecord.cs" Line="1" Column="1" />
+      <File FileName="HiddenMarkovModel/Builders/InputResultsBuilder.cs" Line="1" Column="1" />
+      <File FileName="HiddenMarkovModelTests/HiddenMarkovModelTests.cs" Line="72" Column="66" />
+      <File FileName="HiddenMarkovModel/Models/InputResults.cs" Line="1" Column="1" />
+      <File FileName="HiddenMarkovModel/HiddenMarkovModelBuilder.cs" Line="1" Column="1" />
+      <File FileName="HiddenMarkovModel/HiddenMarkovModel.cs" Line="1" Column="1" />
+      <File FileName="HiddenMarkovModel/Builders/StateRecordBuilder.cs" Line="1" Column="1" />
     </Files>
-    <Pads>
-      <Pad Id="MonoDevelop.NUnit.TestPad">
-        <State expanded="True" selected="True">
-          <Node name="HiddenMarkovModelTests" expanded="True">
-            <Node name="HiddenMarkovModelTests" expanded="True" />
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

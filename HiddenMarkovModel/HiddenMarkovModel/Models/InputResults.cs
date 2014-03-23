@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Text;
+using System.Linq;
 using System.Collections.Generic;
 
 namespace HiddenMarkovModel
@@ -38,6 +40,36 @@ namespace HiddenMarkovModel
 			get {
 				return this.probability;
 			}
+		}
+
+		public string EmissionsResult(string separator) {
+			return string.Join (separator, this.emissions);
+		}
+
+		public string TransitionsResult(string separator) {
+			return string.Join (separator, this.transitions);
+		}
+
+		public string CombinedResult(string separator) {
+			var emissionCount = this.emissions.Count ();
+			if (emissionCount != this.transitions.Count ()) {
+				throw new InvalidOperationException ("emissions and transitions have a different count... for some reason");
+			}
+
+			var workspace = new StringBuilder ();
+
+			for (var i = 0; i < emissionCount; i++) {
+				var emission = this.emissions.ElementAt(i);
+				var transition = this.transitions.ElementAt(i);
+
+				if (i == emissionCount - 1) {
+					workspace.Append (emission + "/" + transition);
+				} else {
+					workspace.Append (emission + "/" + transition + separator);
+				}
+			}
+
+			return workspace.ToString();
 		}
 	}
 }
